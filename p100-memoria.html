@@ -1,8 +1,8 @@
 <html lang="cat">
 
 <head>
-    <meta charset="utf-8">
-    <title>Donar la volta a una carta</title>
+    <meta charset="UTF-8">
+    <title>Memory Game</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="./js/jquery-3.7.1.js"></script>
     <script src="./js/p100-memoria.js"></script>
@@ -10,25 +10,30 @@
 </head>
 
 <body>
-    <header>
-        <h1>Memoria cartes - DEMO</h1>
-    </header>
-
-    <div id="tauler">
-        <div class="carta" id="f1c1">
-
-            <div class="cara davant"></div>
+    <div id="nivells" class="botonsNivells">
+        <h1>MEMORY GAME</h1>
+        <h3>Escull el nivell i comença a jugar</h3>
+        <div id="level-selection">
+            <button id="low" class="button">LOW</button>
+            <button id="medium" class="button">MEDIUM</button>
+            <button id="high" class="button">HIGH</button>
         </div>
-
-
     </div>
 
-    <footer>
-        <p>Fes clic en una carta per donar-li la volta</p>
-    </footer>
+    <div id="tauler" style="display: none;">
+        <div class="carta" id="f1c1">
+            <div class="cara davant"></div>
+        </div>
+    </div>
 
-
-
+    <script>
+        function mostrarTablero() {
+            document.getElementById("nivells").style.display = 'none';
+            document.getElementById("tauler").style.display = 'block';
+        }
+        document.getElementById('low').addEventListener('click', mostrarTablero);
+        document.getElementById('medium').addEventListener('click', mostrarTablero);
+        document.getElementById('high').addEventListener('click', mostrarTablero);
+    </script>
 </body>
-
 </html>
