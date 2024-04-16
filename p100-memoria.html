@@ -12,7 +12,7 @@
 <body>
     <div id="nivells" class="botonsNivells">
         <h1>MEMORY GAME</h1>
-        <h3>Escull el nivell i comença a jugar</h3>
+        <h3>Escull el nivell per començar a jugar</h3>
         <div id="level-selection">
             <button id="low" class="button">LOW</button>
             <button id="medium" class="button">MEDIUM</button>
@@ -20,20 +20,36 @@
         </div>
     </div>
 
-    <div id="tauler" style="display: none;">
+    <div id="contador"> </div>       
+
+    <script>
+        var n = 0;
+        function setCounter() {
+            var l = document.getElementById("contador");
+            l.innerHTML = n;
+            n++;
+        }
+        setCounter();
+        setInterval(setCounter, 1000);
+    </script>
+
+
+    <div id="tauler">
         <div class="carta" id="f1c1">
             <div class="cara davant"></div>
         </div>
     </div>
 
     <script>
-        function mostrarTablero() {
+        function mostrarTaulell() {
             document.getElementById("nivells").style.display = 'none';
             document.getElementById("tauler").style.display = 'block';
         }
-        document.getElementById('low').addEventListener('click', mostrarTablero);
-        document.getElementById('medium').addEventListener('click', mostrarTablero);
-        document.getElementById('high').addEventListener('click', mostrarTablero);
+
+        document.getElementById('low').addEventListener('click', mostrarTaulell);
+        document.getElementById('medium').addEventListener('click', mostrarTaulell);
+        document.getElementById('high').addEventListener('click', mostrarTaulell);
     </script>
 </body>
 </html>
+
