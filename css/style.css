@@ -100,18 +100,57 @@ body {
 }
 
 /* deck */
-/* fila 120 - columna 80) */
 .carta1 {background-position: 0 0;}
 .carta2 {background-position: -80px 0;} 
 .carta3 {background-position: -160px 0;}
 .carta4 {background-position: -240px 0;}
 .carta5 {background-position: -320px 0;}
+.carta6 {background-position: -400px 0;}
+.carta7 {background-position: -480px 0;}
+.carta9 {background-position: -560px 0;}
+.carta10 {background-position: -640px 0;}
+.carta11 {background-position: -720px 0;}
+.carta12 {background-position: -800px 0;}
+.carta13 {background-position: -880px 0;}
 /*...*/
-.carta14 {background-position: 0 -120;}
-.carta15 {background-position: -80px -120px;}
+.carta14 {background-position: 0 -120px;}
+.carta15 {background-position: -80px -120px;} 
 .carta16 {background-position: -160px -120px;}
-/*...*/
+.carta17 {background-position: -240px -120px;}
+.carta18 {background-position: -320px -120px;}
+.carta19 {background-position: -400px -120px;}
+.carta20 {background-position: -480px -120px;}
+.carta21 {background-position: -560px -120px;}
+.carta22 {background-position: -640px -120px;}
+.carta23 {background-position: -720px -120px;}
 .carta24 {background-position: -800px -120px;}
 .carta25 {background-position: -880px -120px;}
-.carta26 {background-position: -960px -120px;}
+.carta26 {background-position: -880px -120px;}
 /*...*/
+.carta27 {background-position: 0 -240px;}
+.carta28 {background-position: -80px -240px;} 
+.carta29 {background-position: -160px -240px;}
+.carta30 {background-position: -240px -240px;}
+.carta31 {background-position: -320px -240px;}
+.carta32 {background-position: -400px -240px;}
+.carta33 {background-position: -480px -240px;}
+.carta34 {background-position: -560px -240px;}
+.carta35 {background-position: -640px -240px;}
+.carta36 {background-position: -720px -240px;}
+.carta37 {background-position: -800px -240px;}
+.carta38 {background-position: -880px -240px;}
+.carta39 {background-position: -880px -240px;}
+/*...*/
+.carta40 {background-position: 0 -360px;}
+.carta41 {background-position: -80px -360px;} 
+.carta42 {background-position: -160px -360px;}
+.carta43 {background-position: -240px -360px;}
+.carta44 {background-position: -320px -360px;}
+.carta45 {background-position: -400px -360px;}
+.carta46 {background-position: -480px -360px;}
+.carta47 {background-position: -560px -360px;}
+.carta48 {background-position: -640px -360px;}
+.carta49 {background-position: -720px -360px;}
+.carta50 {background-position: -800px -360px;}
+.carta51 {background-position: -880px -360px;}
+.carta52 {background-position: -880px -360px;}
