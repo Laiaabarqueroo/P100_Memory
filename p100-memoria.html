@@ -29,8 +29,15 @@
             l.innerHTML = n;
             n++;
         }
-        setCounter();
-        setInterval(setCounter, 1000);
+
+        function startCounter() {
+            setCounter();
+            setInterval(setCounter, 1000);
+        }
+
+        document.getElementById('low').addEventListener('click', startCounter);
+        document.getElementById('medium').addEventListener('click', startCounter);
+        document.getElementById('high').addEventListener('click', startCounter);
     </script>
 
 
