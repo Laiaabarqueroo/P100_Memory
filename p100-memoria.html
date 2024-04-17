@@ -20,26 +20,11 @@
         </div>
     </div>
 
-    <div id="contador"> </div>       
-
-    <script>
-        var n = 0;
-        function setCounter() {
-            var l = document.getElementById("contador");
-            l.innerHTML = n;
-            n++;
-        }
-
-        function startCounter() {
-            setCounter();
-            setInterval(setCounter, 1000);
-        }
-
-        document.getElementById('low').addEventListener('click', startCounter);
-        document.getElementById('medium').addEventListener('click', startCounter);
-        document.getElementById('high').addEventListener('click', startCounter);
-    </script>
-
+    <div id="contenidor">
+        <div id="contador">contador</div>
+        <div id="clicks">clicks</div>
+        <div id="parelles">parelles</div>
+    </div>
 
     <div id="tauler">
         <div class="carta" id="f1c1">
