@@ -1,8 +1,10 @@
 var ampladaCarta, alcadaCarta;
-var separacioH = 20, separacioV = 20;
-var nFiles = 3, nColumnes = 6;
+var separacioH = 20,
+    separacioV = 20;
+var nFiles = 3,
+    nColumnes = 6;
 
-// Funció per guardar totes les cartes en un array
+// Funciï¿½ per guardar totes les cartes en un array
 function cartes() {
     var cartes = [];
     for (var i = 1; i <= 52; i++) {
@@ -11,22 +13,22 @@ function cartes() {
     return cartes;
 }
 
-// Funció per generar les parelles de cartes del joc
+// Funciï¿½ per generar les parelles de cartes del joc
 function jocCartes() {
     var cartesJoc = cartes();
     var cartesEscollides = [];
 
-    // Escollir aleatòriament la meitat de les cartes de les quals disposa el taulell
+    // Escollir aleatï¿½riament la meitat de les cartes de les quals disposa el taulell
     for (var i = 0; i < (nFiles * nColumnes / 2); i++) {
         var randomIndex = Math.floor(Math.random() * cartesJoc.length);
         // Seleccionar la carta seleccionada de l'array de cartes
-        cartesEscollides.push(cartesJoc.splice(randomIndex, 1)[0]); 
+        cartesEscollides.push(cartesJoc.splice(randomIndex, 1)[0]);
     }
     // Dupliquem les cartes seleccionades per formar les parelles
     return cartesEscollides.concat(cartesEscollides);
 }
 
-// Funció per barrejar l'array de cartes
+// Funciï¿½ per barrejar l'array de cartes
 function barrejar(array) {
     for (var i = array.length - 1; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
@@ -37,7 +39,7 @@ function barrejar(array) {
     return array;
 }
 
-$(function () {
+$(function() {
     ampladaCarta = $(".carta").width();
     alcadaCarta = $(".carta").height();
     // Mida del tauler
@@ -66,7 +68,7 @@ $(function () {
         }
     }
 
-    
+
     var parelles = (nFiles * nColumnes) / 2;
     document.getElementById("parelles").textContent = parelles;
 
@@ -75,14 +77,14 @@ $(function () {
     var cartesGirades = 0;
     var clicks = 0
 
-    $('.carta').on('click', function () {
+    $('.carta').on('click', function() {
         click();
 
         // Comprovem si ja s'ha trobat parella per aquesta carta
         if ($(this).hasClass('parella-trobada') || $(this).hasClass('carta-girada') || cartesGirades >= 2) return;
 
         $(this).toggleClass('carta-girada');
-        cartesGirades++;  
+        cartesGirades++;
 
         // Controlem els clicks de l'usuari
         if (clicks === (3 * (nFiles * nColumnes))) {
@@ -134,18 +136,20 @@ $(function () {
 
     var segons = -1;
     var minuts = 0;
+
     function setCounter() {
         segons++;
         if (segons === 60) {
             segons = 0;
             minuts++;
         }
-        // Formatejem els minuts i els segons amb dos dígits
+        // Formatejem els minuts i els segons amb dos dï¿½gits
         var minutosStr = minuts < 10 ? "0" + minuts : minuts;
         var segundosStr = segons < 10 ? "0" + segons : segons;
         var l = document.getElementById("contador");
         l.innerHTML = minutosStr + ":" + segundosStr;
     }
+
     function startCounter() {
         setCounter();
         setInterval(setCounter, 1000);
