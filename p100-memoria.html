@@ -1,17 +1,13 @@
+<!DOCTYPE html>
 <html lang="cat">
 
 <head>
     <meta charset="UTF-8">
     <title>Memory Game</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
     <script src="./js/jquery-3.7.1.js"></script>
     <script src="./js/p100-memoria.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
 </head>
 
 <body>
@@ -19,60 +15,49 @@
         <h1>MEMORY GAME</h1>
         <h3>Escull el nivell per començar a jugar</h3>
         <div id="level-selection">
-            <button id="low" class="button">LOW</button>
-            <button id="medium" class="button">MEDIUM</button>
-            <button id="high" class="button">HIGH</button>
+            <button id="low" class="btn btn-primary btn-lg">BASIC</button>
+            <button id="medium" class="btn btn-primary btn-lg">MEDIUM</button>
+            <button id="high" class="btn btn-primary btn-lg">HIGH</button>
         </div>
     </div>
 
-    <div id="contenidor">
-        <div id="contador">contador</div>
-        <div id="clicks">clicks</div>
-        <div id="parelles">parelles</div>
-    </div>
+    <div id="Memory">
+        <div id="contenidor">
+            <div id="contador">contador</div>
+            <div id="clicks">clicks</div>
+            <div id="parelles">parelles</div>
+        </div>
 
-    <div id="tauler">
-        <div class="carta" id="f1c1">
-            <div class="cara davant"></div>
+        <div id="tauler">
+            <div class="carta" id="f1c1">
+                <div class="cara davant"></div>
+            </div>
         </div>
     </div>
 
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    Launch demo modal
-  </button>
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+    <div class="modal" id="modal" tabindex="-1" style="display: none;" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title">Game Over!</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <p>Oh no! You've lost the game. Would you like to restart or exit?</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" id="restartButton" class="btn btn-primary btn-lg">Restart</button>
+                    <button type="button" id="exitButton" class="btn btn-secondary btn-lg" data-dismiss="modal">Exit</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <script>
-        function mostrarTaulell() {
-            document.getElementById("nivells").style.display = 'none';
-            document.getElementById("tauler").style.display = 'block';
-        }
-
-        document.getElementById('low').addEventListener('click', mostrarTaulell);
-        document.getElementById('medium').addEventListener('click', mostrarTaulell);
-        document.getElementById('high').addEventListener('click', mostrarTaulell);
-    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
