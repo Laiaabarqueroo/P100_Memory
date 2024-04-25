@@ -1,22 +1,3 @@
-/* CSS SETUP */
-
-.modal-content {
-    border-radius: 20px;
-}
-
-#Memory {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    width: 100v;
-}
-
-#nivells {
-    display: flex;
-}
-
 .botonsNivells {
     display: flex;
     flex-direction: column;
@@ -50,7 +31,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
 }
 
 #contador,
@@ -58,15 +38,35 @@
 #parelles {
     flex: 1;
     height: auto;
-    background: #232;
+    background: #232 url(../images/table.jpg);
     font-size: 25px;
     color: #FFFFFF;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     text-align: center;
+    align-items: center;
     padding: 15px;
     margin-bottom: 10px;
     border-radius: 5px;
     margin-right: 10px;
+}
+
+
+/* CSS NUMCLICKS */
+
+#numclicks {
+    width: 100px;
+    height: 25px;
+    font-size: 25px;
+    color: #FFFFFF;
+    font-family: 'Times New Roman', Times, serif;
+    background: #232 url(../images/table.jpg);
+    margin: 0 auto;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -76,8 +76,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background: #9E9E9E;
+    background: #9E9E9E url(../images/fons.webp);
 }
 
 
@@ -87,7 +86,7 @@ body {
     border-radius: 10px;
     border: 1px solid #666;
     position: relative;
-    background: #232;
+    background: #232 url(../images/table.jpg);
     margin: 0 auto;
     box-shadow: 0 -1px 0 #999, 0 1px 0 #999, inset 0;
     justify-content: center;
@@ -95,11 +94,15 @@ body {
 
 .carta {
     width: 80px;
+    /* 80 deck */
     height: 120px;
+    /* 120 deck */
     position: absolute;
     -webkit-perspective: 300px;
+    /* Chrome, Safari, Opera  */
     transform-style: preserve-3d;
     perspective: 300px;
+    /*transition: all .3s; */
 }
 
 .carta:hover .cara {
@@ -111,6 +114,7 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
+    /* per poder moure la carta */
     transition-property: transform, shadow;
     transition-duration: .5s;
     backface-visibility: hidden;
@@ -118,19 +122,237 @@ body {
 
 .darrera {
     background: #999 url(../images/deck.png) 0px -480px;
+    /* deck */
+    width: 100%;
+    height: 100%;
 }
 
 .davant {
     background: #efefef url(../images/deck.png);
+    /* deck */
     transform: rotate3d(0, 1, 0, -180deg);
 }
 
 .carta-girada .darrera {
-    background: #999 url(../images/deck.png) 0px -480px;
     transform: rotate3d(0, 1, 0, 180deg);
 }
 
 .carta-girada .davant {
     transform: rotate3d(0, 1, 0, 0deg);
-    background: #efefef url(../images/deck.png);
+}
+
+
+/* deck */
+
+.carta1 {
+    background-position: 0 0;
+}
+
+.carta2 {
+    background-position: -80px 0;
+}
+
+.carta3 {
+    background-position: -160px 0;
+}
+
+.carta4 {
+    background-position: -240px 0;
+}
+
+.carta5 {
+    background-position: -320px 0;
+}
+
+.carta6 {
+    background-position: -400px 0;
+}
+
+.carta7 {
+    background-position: -480px 0;
+}
+
+.carta9 {
+    background-position: -560px 0;
+}
+
+.carta10 {
+    background-position: -640px 0;
+}
+
+.carta11 {
+    background-position: -720px 0;
+}
+
+.carta12 {
+    background-position: -800px 0;
+}
+
+.carta13 {
+    background-position: -880px 0;
+}
+
+
+/*...*/
+
+.carta14 {
+    background-position: 0 -120px;
+}
+
+.carta15 {
+    background-position: -80px -120px;
+}
+
+.carta16 {
+    background-position: -160px -120px;
+}
+
+.carta17 {
+    background-position: -240px -120px;
+}
+
+.carta18 {
+    background-position: -320px -120px;
+}
+
+.carta19 {
+    background-position: -400px -120px;
+}
+
+.carta20 {
+    background-position: -480px -120px;
+}
+
+.carta21 {
+    background-position: -560px -120px;
+}
+
+.carta22 {
+    background-position: -640px -120px;
+}
+
+.carta23 {
+    background-position: -720px -120px;
+}
+
+.carta24 {
+    background-position: -800px -120px;
+}
+
+.carta25 {
+    background-position: -880px -120px;
+}
+
+.carta26 {
+    background-position: -880px -120px;
+}
+
+
+/*...*/
+
+.carta27 {
+    background-position: 0 -240px;
+}
+
+.carta28 {
+    background-position: -80px -240px;
+}
+
+.carta29 {
+    background-position: -160px -240px;
+}
+
+.carta30 {
+    background-position: -240px -240px;
+}
+
+.carta31 {
+    background-position: -320px -240px;
+}
+
+.carta32 {
+    background-position: -400px -240px;
+}
+
+.carta33 {
+    background-position: -480px -240px;
+}
+
+.carta34 {
+    background-position: -560px -240px;
+}
+
+.carta35 {
+    background-position: -640px -240px;
+}
+
+.carta36 {
+    background-position: -720px -240px;
+}
+
+.carta37 {
+    background-position: -800px -240px;
+}
+
+.carta38 {
+    background-position: -880px -240px;
+}
+
+.carta39 {
+    background-position: -880px -240px;
+}
+
+
+/*...*/
+
+.carta40 {
+    background-position: 0 -360px;
+}
+
+.carta41 {
+    background-position: -80px -360px;
+}
+
+.carta42 {
+    background-position: -160px -360px;
+}
+
+.carta43 {
+    background-position: -240px -360px;
+}
+
+.carta44 {
+    background-position: -320px -360px;
+}
+
+.carta45 {
+    background-position: -400px -360px;
+}
+
+.carta46 {
+    background-position: -480px -360px;
+}
+
+.carta47 {
+    background-position: -560px -360px;
+}
+
+.carta48 {
+    background-position: -640px -360px;
+}
+
+.carta49 {
+    background-position: -720px -360px;
+}
+
+.carta50 {
+    background-position: -800px -360px;
+}
+
+.carta51 {
+    background-position: -880px -360px;
+}
+
+.carta52 {
+    background-position: -880px -360px;
 }
